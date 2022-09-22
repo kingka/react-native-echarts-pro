@@ -136,7 +136,7 @@ function Echarts(props, ref) {
   }, [props.eventActions]);
 
   return (
-    <View style={{ flex: 1, height: props.height || 400 }}>
+    <View style={{ flex: 1, height: props.height || 400 }} {...props}>
       {showContainer && (
         <WebView
           androidHardwareAccelerationDisabled={true}
