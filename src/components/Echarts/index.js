@@ -139,6 +139,7 @@ function Echarts(props, ref) {
     <View style={{ flex: 1, height: props.height || 400 }} {...props}>
       {showContainer && (
         <WebView
+          bounces={false}
           androidHardwareAccelerationDisabled={true}
           textZoom={100}
           scrollEnabled={true}
