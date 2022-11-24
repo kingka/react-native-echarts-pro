@@ -82,6 +82,17 @@ export default function renderChart(props) {
         myChart.dispatchAction(action)
       }
     }
+    
+     let body1 = document.createElement('style')
+    body1.textContent = \`*{
+      -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+      -webkit-user-select:none; /*webkit浏览器*/
+      -khtml-user-select:none; /*早期浏览器*/
+      -moz-user-select:none;/*火狐*/
+      -ms-user-select:none; /*IE10*/
+      user-select:none;
+    }\`;
+document.head.appendChild(body1);
     //判断是否是iOS
     if(${isiOS}){
       window.addEventListener("message", (event) => {
